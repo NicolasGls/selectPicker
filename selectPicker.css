@@ -1,0 +1,57 @@
+
+#selectPickerOverflow {
+    position: relative;
+    height: 120px;
+    margin: 50px 20px 20px;
+    overflow-y: hidden;
+    box-shadow: 0 0 10px 15px white inset;
+}
+    #selectPickerOverflow:after,
+    #selectPickerOverflow:before {
+        content: "";
+        height: 35px;
+        position: absolute; right: 0; top: 0; left: 0;
+        z-index: 1;
+        background: -moz-linear-gradient(top,  rgba(255,255,255,1) 33%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(33%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 33%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  rgba(255,255,255,1) 33%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  rgba(255,255,255,1) 33%,rgba(255,255,255,0) 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  rgba(255,255,255,1) 33%,rgba(255,255,255,0) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+    }
+    #selectPickerOverflow:before {
+        top: inherit; bottom: 0;
+        background: -moz-linear-gradient(top,  rgba(255,255,255,0) 1%, rgba(255,255,255,0.03) 3%, rgba(255,255,255,1) 63%, rgba(255,255,255,1) 64%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(255,255,255,0)), color-stop(3%,rgba(255,255,255,0.03)), color-stop(63%,rgba(255,255,255,1)), color-stop(64%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 1%,rgba(255,255,255,0.03) 3%,rgba(255,255,255,1) 63%,rgba(255,255,255,1) 64%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  rgba(255,255,255,0) 1%,rgba(255,255,255,0.03) 3%,rgba(255,255,255,1) 63%,rgba(255,255,255,1) 64%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  rgba(255,255,255,0) 1%,rgba(255,255,255,0.03) 3%,rgba(255,255,255,1) 63%,rgba(255,255,255,1) 64%); /* IE10+ */
+        background: linear-gradient(to bottom,  rgba(255,255,255,0) 1%,rgba(255,255,255,0.03) 3%,rgba(255,255,255,1) 63%,rgba(255,255,255,1) 64%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+    }
+
+    #selectPicker {
+        height: 40px;
+        position: relative; top: 40px;
+        box-sizing: border-box;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5); border-top: 1px solid rgba(0, 0, 0, 0.5);
+    }
+
+        #selectPickerWrapper {
+            position: relative; top: 0;
+            -moz-transition: .3s all ease;
+            -webkit-transition: .3s all ease;
+            -ms-transition: .3s all ease;
+            transition: .3s all ease;
+        }
+
+            #selectPicker span {
+                height: 40px;
+                display: block;
+                box-sizing: border-box;
+                line-height: 2.5;
+            }
+            #selectPicker span.active {
+                color: red;
+            }
